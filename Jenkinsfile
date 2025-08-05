@@ -8,7 +8,7 @@ pipeline {
         APP_NAME = 'my-nodejs-app'
         IMAGE_TAG = "${env.BUILD_NUMBER}" // Use Jenkins build number for unique tags
         KUBECONFIG_ID = 'kubeconfig-file' // ID of your Kubeconfig credential in Jenkins
-        DOCKER_REGISTRY = 'https://hub.docker.com/repositories/saurabh0019'
+    
     }
 
     stages {
