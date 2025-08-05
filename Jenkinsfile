@@ -30,6 +30,10 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
+                               environment {
+    DOCKER_REGISTRY = 'https://hub.docker.com/repositories/saurabh0019'
+}
+
                     // Login and push the Docker image
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials',
                                                        usernameVariable: 'DOCKER_USER',
