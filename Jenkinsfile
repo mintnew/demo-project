@@ -1,4 +1,4 @@
-```groovy
+
 pipeline {
     agent any // Or a specific Docker agent if you want to isolate builds
 
