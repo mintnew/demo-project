@@ -2,7 +2,7 @@ pipeline {
     agent any // Or a specific Docker agent if you want to isolate builds
 
     environment {
-        DOCKER_REGISTRY = 'docker.io' // Or your private registry URL
+        DOCKER_REGISTRY = 'https://hub.docker.com/search?badges=official' // Or your private registry URL
         DOCKER_USERNAME = credentials('docker-hub-credentials').getUsername() // Using Jenkins Credentials
         DOCKER_PASSWORD = credentials('docker-hub-credentials').getPassword() // Using Jenkins Credentials
         APP_NAME = 'my-nodejs-app'
